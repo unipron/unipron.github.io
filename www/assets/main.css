@@ -631,6 +631,7 @@ header.fixed-header {
   top: 50%;
   left: 15%;
   transform: translateY(-50%);
+  z-index: 1;
 }
 .banner-title h1 {
   color: #fff;
