@@ -1025,6 +1025,7 @@ header.fixed-header {
 }
 #blog .blog-item .more a {
   font-weight: 600;
+  color: black;
 }
 @media screen and (min-width: 992px) {
   #blog .col {
