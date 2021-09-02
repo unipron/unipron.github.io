@@ -117,7 +117,7 @@ img {
   }
 }
 a {
-  color: #000;
+  color: #fff;
   text-decoration: underline;
 }
 .hero {
@@ -923,11 +923,25 @@ header.fixed-header {
   from{border-right-color: #fff;}
   to{border-right-color: transparent;}
 }
+@media screen and (max-width: 470px) {
+	.banner-title h1 {
+    font-size: 35px;
+	}
+   }
+
+@media screen and (min-width: 470px) and (max-width: 600px) {
+	.banner-title h1 {
+    font-size: 45px;
+	}
+   }
+
+@media screen and (min-width: 600px) and (max-width: 991px) {
+	.banner-title h1 {
+    font-size: 55px;
+	}
+   }
 
 @media screen and (max-width: 991px) {
-  .banner-title h1 {
-    font-size: 35px;
-  }
   @keyframes animated-text{
     from{width: 0;}
     to{width: 100%;}
@@ -1025,6 +1039,7 @@ header.fixed-header {
 }
 #blog .blog-item .more a {
   font-weight: 600;
+  color: black;
 }
 @media screen and (min-width: 992px) {
   #blog .col {
