@@ -871,10 +871,6 @@ header.fixed-header {
     margin-top: 8px;
     padding: 0 5px;
   }
-  #portfolio .col-3:last-child .inner {
-    width: 49%;
-    height: auto;
-  }
   #portfolio .col-3:last-child .inner:first-child {
     margin-bottom: 0;
     margin-right: 5px;
@@ -882,9 +878,21 @@ header.fixed-header {
   #portfolio .col-3:last-child .inner:last-child {
     margin-top: 0;
   }
-  #portfolio .col-3 .inner.full-height,
+  #portfolio .col-3 .inner.full-height {
+    max-height: 300px;
+  }
   #portfolio .col-3.double-img .inner {
+    max-height: 145px;
+    width: 100%;
+  }
+  #portfolio .col-3.double-img .inner img {
+    object-fit: cover;
+    width: 100%;
+  }
+  #portfolio .col-3.double-img:last-child .inner {
+    width: 49%;
     height: auto;
+    max-height: 145px;
   }
 }
 
