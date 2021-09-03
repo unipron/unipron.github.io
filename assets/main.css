@@ -854,7 +854,6 @@ header.fixed-header {
 }
 
 @media screen and (max-width: 991px) {
-  #portfolio .container .row { display: block; }
   #portfolio .col-3:not(:last-child) {
     padding: 0 5px;
     flex: 0 0 50%;
