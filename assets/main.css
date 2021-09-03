@@ -885,6 +885,10 @@ header.fixed-header {
   #portfolio .col-3:last-child .inner:last-child {
     margin-top: 0;
   }
+  #portfolio .col-3 .inner.full-height,
+  #portfolio .col-3.double-img .inner {
+    height: auto;
+  }
 }
 
 .banner-title h1 {
@@ -1082,6 +1086,7 @@ header.fixed-header {
 .blog-post .post-wrapper .breadcrumb a {
   text-decoration: none;
   font-weight: 600;
+  color: inherit;
 }
 .blog-post .post-wrapper .breadcrumb span {
   font-size: 16px;
@@ -1121,6 +1126,10 @@ header.fixed-header {
 }
 .blog-post .more-blogs .title a {
   text-decoration: none;
+  color: inherit;
+}
+.blog-post .more-blogs .more a {
+  color: inherit;
 }
 @media screen and (min-width: 992px) {
   .blog-post .blog-list .col {
