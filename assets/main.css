@@ -172,9 +172,9 @@ a {
 .nav-link {
   z-index: 2;
   margin-right: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: 15px;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-right: 0px;
   padding-left: 0px;
   -webkit-box-flex: 0;
@@ -203,6 +203,11 @@ a {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+.nav-logo-wrap .w-nav-brand {
+  font-size: 2.3rem;
+  color: aliceblue;
+  font-family: 'Montserrat';
 }
 @media (max-width: 991px) {
   .hero {
@@ -419,6 +424,9 @@ footer ul li a {
   color: #fff;
   text-decoration: none;
 }
+footer ul li p {
+  margin: 0px;
+}
 footer .menu-title {
   font-weight: 600;
 }
@@ -430,9 +438,6 @@ footer .info {
   justify-content: space-between;
   align-items: center;
   margin-top: 60px;
-}
-footer .info img {
-  max-width: 220px;
 }
 footer .col-4:not(:last-child) {
   width: 20%;
@@ -627,10 +632,8 @@ footer {
   text-align: center;
   z-index: 99;
 }
-.arrow svg {
+.arrow img {
   width: 30px;
-  color: #fff;
-  fill: #fff;
 }
 
 #about {
@@ -701,7 +704,7 @@ header.fixed-header {
 }
 @media screen and (min-width: 992px) { 
   header.fixed-header {
-    padding: 10px 30px;
+    padding: 0 30px;
   }
 }
 @media screen and (max-width: 991px) { 
@@ -740,15 +743,12 @@ header.fixed-header {
   overflow: hidden;
   line-height: 0;
 }
-.custom-shape-divider-top-1630041667 svg {
+.custom-shape-divider-top-1630041667 img {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 123px;
   transform: rotateY(180deg);
-}
-.custom-shape-divider-top-1630041667 .shape-fill {
-  fill: #362561;
 }
 
 .custom-shape-divider-bottom-1630041874 {
@@ -760,15 +760,12 @@ header.fixed-header {
   line-height: 0;
   transform: rotate(180deg);
 }
-.custom-shape-divider-bottom-1630041874 svg {
+.custom-shape-divider-bottom-1630041874 img {
   position: relative;
   display: block;
   width: calc(135% + 1.3px);
   height: 93px;
   transform: rotateY(180deg);
-}
-.custom-shape-divider-bottom-1630041874 .shape-fill {
-  fill: #362561;
 }
 
 @media screen and (max-width: 991px) {
@@ -857,10 +854,11 @@ header.fixed-header {
 }
 
 @media screen and (max-width: 991px) {
+  #portfolio .container .row { display: block; }
   #portfolio .col-3:not(:last-child) {
     padding: 0 5px;
     flex: 0 0 50%;
-    max-width: 50%;
+    width: 50%;
   }
   #portfolio .col-3.double-img .inner:first-child {
     margin-bottom: 5px;
@@ -1029,7 +1027,7 @@ header.fixed-header {
   width:140px;
 }
 
-#Leistungen .service-item svg{
+#Leistungen .service-item img{
   max-width: 180px;
 }
 
