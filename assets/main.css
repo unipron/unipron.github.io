@@ -907,7 +907,7 @@ header.fixed-header {
   animation: animated-text 4s steps(16,end) 1s 1 normal both, animated-cursor 600ms steps(16,end);
 }
 .banner-title h1:last-child {
-  border-right: 0;
+  border-right-color: transparent;
   animation: animated-text2 4s steps(16,end) 1s 1 normal both, animated-cursor2 600ms steps(16,end) infinite;
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
@@ -920,15 +920,12 @@ header.fixed-header {
 @keyframes animated-cursor{
   from{border-right-color: #fff;}
   to{border-right-color: transparent;}
-  100% { border-right-color: transparent; }
 }
 @keyframes animated-text2{
   from{width: 0;}
   to{width: 750px;}
 }
 @keyframes animated-cursor2{
-  0% { border-right: solid 3px #fff; }
-  100% { border-right: solid 3px #fff; }
   from{border-right-color: #fff;}
   to{border-right-color: transparent;}
 }
