@@ -117,7 +117,7 @@ img {
   }
 }
 a {
-  color: #fff;
+  color: inherit;
   text-decoration: underline;
 }
 .hero {
@@ -1145,4 +1145,25 @@ header.fixed-header {
   .blog-post .post-wrapper {
     padding-top: 100px;
   } 
+}
+
+.content-page {
+  background-color: white;
+  font-family: 'Work Sans';
+}
+.content-page .dten {
+  margin: auto;
+  padding: 50px;
+  font-size: large;
+}
+.content-page #start-page {
+  height: 8vh;
+}
+.content-page header {
+  background-color: rgb(65, 34, 142);
+}
+.content-page .imp {
+  margin: auto;
+  padding: 50px;
+  font-size: large;
 }
