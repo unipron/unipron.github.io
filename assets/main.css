@@ -318,7 +318,6 @@ body {
   align-items: center;
 }
 #sec-2 {
-  background-image: url(../../media/pp.jpeg);
   background-repeat: repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -905,13 +904,33 @@ header.fixed-header {
   margin-top: 0;
 }
 .banner-title h1:first-child {
-  animation: animated-text 4s steps(16,end) 1s 1 normal both, animated-cursor 600ms steps(16,end);
+  animation: typing 4s steps(16, end), blink-caret 600ms step-end;
 }
 .banner-title h1:last-child {
-  animation: animated-text2 4s steps(16,end) 1s 1 normal both, animated-cursor2 600ms steps(16,end) infinite;
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
+  -webkit-animation: typing 4s steps(16, end), blink-caret 600ms step-end;
+  -webkit-animation-delay: 4s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation: typing 4s steps(16, end), blink-caret 600ms step-end;
+  -moz-animation-delay: 4s;
 }
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 760px;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
 @keyframes animated-text{
   from{width: 0;}
   to{width: 760px;}
@@ -927,6 +946,7 @@ header.fixed-header {
   to{width: 750px;}
 }
 @keyframes animated-cursor2{
+  0% { border-right: solid 3px #fff; }
   from{border-right-color: #fff;}
   to{border-right-color: transparent;}
 }
