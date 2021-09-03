@@ -904,33 +904,14 @@ header.fixed-header {
   margin-top: 0;
 }
 .banner-title h1:first-child {
-  animation: typing 4s steps(16, end), blink-caret 600ms step-end;
+  animation: animated-text 4s steps(16,end) 1s 1 normal both, animated-cursor 600ms steps(16,end);
 }
 .banner-title h1:last-child {
-  -webkit-animation: typing 4s steps(16, end), blink-caret 600ms step-end;
-  -webkit-animation-delay: 4s;
-  -webkit-animation-fill-mode: both;
-  -moz-animation: typing 4s steps(16, end), blink-caret 600ms step-end;
-  -moz-animation-delay: 4s;
+  border-right: 0;
+  animation: animated-text2 4s steps(16,end) 1s 1 normal both, animated-cursor2 600ms steps(16,end) infinite;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
 }
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-  to {
-    width: 760px;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent
-  }
-  50% {
-    border-color: #fff;
-  }
-}
-
 @keyframes animated-text{
   from{width: 0;}
   to{width: 760px;}
@@ -947,6 +928,7 @@ header.fixed-header {
 }
 @keyframes animated-cursor2{
   0% { border-right: solid 3px #fff; }
+  100% { border-right: solid 3px #fff; }
   from{border-right-color: #fff;}
   to{border-right-color: transparent;}
 }
