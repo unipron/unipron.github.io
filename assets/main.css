@@ -477,7 +477,7 @@ footer ul.social li a img {
   left:0px;
   width:100%;
 }
-.layer-bg svg {
+.layer-bg img {
   max-width: 100%;
 }
 
@@ -771,11 +771,11 @@ header.fixed-header {
   .services { 
     padding: 80px 0px;
   }
-  .custom-shape-divider-top-1630041667 svg {
+  .custom-shape-divider-top-1630041667 img {
     height: 30px;
     width: 120%;
   }
-  .custom-shape-divider-bottom-1630041874 svg {
+  .custom-shape-divider-bottom-1630041874 img {
     width: 130%;
     height: 70px;
   }
