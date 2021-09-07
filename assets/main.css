@@ -353,17 +353,16 @@ body {
 }
 .services {
   text-align: center;
-  padding: 140px 0px 90px;
+  color:white;
+  background-color:#262529;
 }
 .section-title h2 {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 28px;
-  color: black;
 }
 .section-title p {
   font-style: italic;
-  color: rgb(102, 102, 102);
   font-family: "Work Sans", serif;
 }
 .col {
@@ -388,9 +387,9 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 992px) {
+@media (min-width: 1250px) {
   .container {
-    width: 970px;
+    max-width: 1250px;
   }
 }
 .services .service-item {
@@ -642,6 +641,7 @@ footer {
   position: relative;
   z-index: 999;
   background: #fff;
+  background-color: #f9f0e4;
 }
 .icon-w-text h4 {
   font-size: 20px;
@@ -735,7 +735,7 @@ header.fixed-header {
   position: relative;
 }
 .custom-shape-divider-top-1630041667 {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -751,7 +751,7 @@ header.fixed-header {
 }
 
 .custom-shape-divider-bottom-1630041874 {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -765,20 +765,6 @@ header.fixed-header {
   width: calc(135% + 1.3px);
   height: 93px;
   transform: rotateY(180deg);
-}
-
-@media screen and (max-width: 991px) {
-  .services { 
-    padding: 80px 0px;
-  }
-  .custom-shape-divider-top-1630041667 img {
-    height: 30px;
-    width: 120%;
-  }
-  .custom-shape-divider-bottom-1630041874 img {
-    width: 130%;
-    height: 70px;
-  }
 }
 
 #portfolio {
