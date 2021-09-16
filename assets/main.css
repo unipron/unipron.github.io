@@ -908,6 +908,9 @@ header.fixed-header {
   animation-delay: 6s;
   opacity: 0;
 }
+.banner-title h1.no-cursor::after {
+  width: 0 !important;
+}
 @keyframes typewriter {
   to {
     left: 100%;
