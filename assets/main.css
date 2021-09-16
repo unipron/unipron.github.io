@@ -475,6 +475,7 @@ footer ul.social li a img {
   top: 0;
   left:0px;
   width:100%;
+  z-index: 99999;
 }
 .layer-bg img {
   max-width: 100%;
@@ -1105,6 +1106,9 @@ header.fixed-header {
 .blog-post header {
   background-color: #3f2286;
 }
+.blog-post footer {
+  padding-top: 100px;
+}
 .blog-post .post-wrapper {
   padding-top: 150px;
 }
@@ -1187,8 +1191,14 @@ header.fixed-header {
   .blog-post .post-wrapper {
     padding-top: 100px;
   } 
+  .blog-post footer {
+    padding-top: 60px;
+  }
 }
 
+.content-page footer {
+  padding-top: 100px;
+}
 .content-page {
   background-color: white;
   font-family: 'Work Sans';
@@ -1213,6 +1223,9 @@ header.fixed-header {
 /* project page */
 .project-page header {
   background-color: #3f2286;
+}
+.project-page footer {
+  padding-top: 100px;
 }
 .project-page .project-wrapper {
   padding-top: 150px;
@@ -1258,6 +1271,10 @@ header.fixed-header {
   padding-top: 60px;
 }
 @media screen and (max-width: 991px) {
+  .content-page footer,
+  .project-page footer {
+    padding-top: 60px;
+  }
   .project-page .project-wrapper {
     padding-top: 80px;
   }
