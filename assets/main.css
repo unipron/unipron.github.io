@@ -483,6 +483,9 @@ footer ul.social li a img {
 
 /* Added style fixes */
 @media screen and (max-width: 991px) {
+  .layer-bg img {
+    max-width: 125%;
+  }
   .layer-bg { top: 8%; }
   .nav-inner { 
     display: block;
