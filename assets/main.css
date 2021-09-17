@@ -292,9 +292,6 @@ body {
 }
 .icon-w-text img {
   width: 40%;
-  border: black solid;
-  border-radius: 25px;
-  box-shadow: black;
 }
 @media (min-width: 992px) {
   .icon-w-text img{
