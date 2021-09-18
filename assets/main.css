@@ -832,7 +832,7 @@ header.fixed-header {
     padding-right: 60px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
   #portfolio .col-3:not(:last-child) {
     padding: 0 5px;
     flex: 0 0 50%;
