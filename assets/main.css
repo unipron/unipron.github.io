@@ -850,6 +850,9 @@ header.fixed-header {
     margin-top: 8px;
     padding: 0 5px;
   }
+  #portfolio .col-3 .inner img {
+    width: 100%;
+  }
   #portfolio .col-3:last-child .inner:first-child {
     margin-bottom: 0;
     margin-right: 5px;
@@ -857,11 +860,7 @@ header.fixed-header {
   #portfolio .col-3:last-child .inner:last-child {
     margin-top: 0;
   }
-  #portfolio .col-3 .inner.full-height {
-    max-height: 300px;
-  }
   #portfolio .col-3.double-img .inner {
-    max-height: 145px;
     width: 100%;
   }
   #portfolio .col-3.double-img .inner img {
@@ -869,8 +868,38 @@ header.fixed-header {
     width: 100%;
   }
   #portfolio .col-3.double-img:last-child .inner {
-    width: 49%;
     height: auto;
+  }
+}
+@media screen and (max-width: 1180px) and (min-width: 769px) {
+  #portfolio .col-3:not(:last-child) {
+    padding: 0 5px;
+    flex: 0 0 50%;
+    width: 50%;
+  }
+  #portfolio .col-3 .inner.full-height {
+    max-height: 550px;
+  }
+  #portfolio .col-3 .inner img {
+    width: 100%;
+  }
+  #portfolio .col-3.double-img .inner,
+  #portfolio .col-3.double-img:last-child .inner {
+    max-height: 270px;
+  }
+  #portfolio .col-3.double-img:last-child .inner {
+    width: 49.5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #portfolio .col-3 .inner.full-height {
+    max-height: 300px;
+  }
+  #portfolio .col-3.double-img .inner {
+    max-height: 145px;
+  }
+  #portfolio .col-3.double-img:last-child .inner {
+    width: 49%;
     max-height: 145px;
   }
 }
