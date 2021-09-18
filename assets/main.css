@@ -829,8 +829,13 @@ header.fixed-header {
   opacity: 1;
   visibility: visible;
 }
-
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) and (min-width: 620px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
   #portfolio .col-3:not(:last-child) {
     padding: 0 5px;
     flex: 0 0 50%;
