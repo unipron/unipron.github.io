@@ -483,9 +483,9 @@ footer ul.social li a img {
 /* Added style fixes */
 @media screen and (max-width: 991px) {
   .layer-bg { top: 8%; }
-  .nav-inner { 
+  .nav-inner {
     display: block;
-    position: relative; 
+    position: relative;
   }
   .nav-logo-wrap { height: 66px; }
   .w-nav-brand { padding-top: 23px; }
@@ -512,8 +512,8 @@ footer ul.social li a img {
 
 
 /* Added styles */
-html,body { 
-  overflow-x: hidden; 
+html,body {
+  overflow-x: hidden;
   background-color: #3f2286;
 }
 .bg-white {
@@ -536,8 +536,8 @@ html,body {
   top: 10px;
   left: 12px;
   cursor: pointer;
-  opacity: 0; 
-  z-index: 2; 
+  opacity: 0;
+  z-index: 2;
   -webkit-touch-callout: none;
 }
 #hammenu span {
@@ -685,19 +685,19 @@ header.fixed-header {
   top: 50%;
   left: 15%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 100;
 }
 .banner-title h1 {
   color: #fff;
   font-size: 80px;
   line-height: initial;
 }
-@media screen and (min-width: 992px) { 
+@media screen and (min-width: 992px) {
   header.fixed-header {
     padding: 0 30px;
   }
 }
-@media screen and (max-width: 991px) { 
+@media screen and (max-width: 991px) {
   header {
     background: #362561;
   }
@@ -908,8 +908,8 @@ header.fixed-header {
 /* .banner-title h1 {
   border-right: solid 3px #fff;
   white-space: nowrap;
-  overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
+  overflow: hidden;
+  font-family: 'Source Code Pro', monospace;
   margin-bottom: 30px;
   margin-top: 0;
 } */
@@ -1009,7 +1009,7 @@ header.fixed-header {
   right: 8%;
   width: 26vh;
 }
- 
+
 @media screen and (max-width: 1180px) and (min-width: 620px) {
   .icon-3 {
     width: 19vh;
@@ -1238,7 +1238,7 @@ header.fixed-header {
   }
   .blog-post .post-wrapper {
     padding-top: 100px;
-  } 
+  }
   .blog-post footer {
     padding-top: 60px;
   }
