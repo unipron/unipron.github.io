@@ -221,7 +221,8 @@ a {
     width: 100%;
   }
   .nav-link {
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .nav-link:hover {
     box-shadow: none;
@@ -637,7 +638,7 @@ footer {
 .nav-logo-wrap a { width: 100%; }
 .arrow {
   text-align: center;
-  z-index: 99;
+  z-index: 9999;
 }
 .arrow img {
   width: 30px;
