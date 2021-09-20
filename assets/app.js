@@ -35,3 +35,11 @@ $(window).scroll(function(){
     $('header').removeClass('fixed-header');
   }
 });
+
+$('.banner-title h1:first-child').on('animationend webkitAnimationEnd', function() { 
+  $(this).addClass('no-cursor');
+});
+
+$('.banner-title h1:last-child').on('animationend webkitAnimationEnd', function() { 
+  $(this).addClass('no-cursor');
+});
