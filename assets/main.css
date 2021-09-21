@@ -9,6 +9,7 @@ nav {
 }
 a {
   background-color: transparent;
+  overflow-wrap: break-word;
 }
 a:active,
 a:hover {
