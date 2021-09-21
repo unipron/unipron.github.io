@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Unipron Shopify Experts">
+  <meta name="title" content="Unipron Shopify Experts">
+  <meta name="keywords" content="Shopify, Shopify Experts">
+
+  <link href="assets/main.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="media/favicon-fix.svg">
+  <title>Unipron</title>
+</head>
+
+<body class="body blog-post">
+  <header>
+    <div class="hero">
+      <div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1" class="nav w-nav">
+        <div class="nav-inner">
+          <div class="nav-logo-wrap">
+            <a href="index.html" class="brand w-nav-brand" title="Unipron">
+              <img src="media/logo-new.svg" alt="Unipron" />
+            </a>
+          </div>
+          <div class="nav-menu-wrap">
+            <nav role="navigation" id="nav-menu" class="nav-menu-2 w-nav-menu">
+              <a href="index.html#Leistungen" class="nav-link w-nav-link">Leistungen</a>
+              <a href="index.html#about" class="nav-link w-nav-link">Über Uns</a>
+              <a href="index.html#process" class="nav-link w-nav-link">Prozess</a>
+              <a href="index.html#blog" class="nav-link w-nav-link">Blog</a>
+              <a href="index.html#portfolio" class="nav-link w-nav-link">Portfolio</a>
+              <a href="index.html#contact" class="nav-link w-nav-link">Kontakt</a>
+            </nav>
+            <div id="hammenu" class="menu-button w-nav-button">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-white">
+    <div class="post-wrapper container">
+      <div class="container">
+        <div class="breadcrumb">
+          <div class="links">
+            <a href="index.html">Home</a><span>&#8250;</span><a href="index.html">Blog</a>
+          </div>
+        </div>
+        <h1>Alternative Layouts in Shopify</h1>
+        <div class="post-banner">
+          <img src="media/blog1.jpeg" alt="" />
+        </div>
+        <div class="content">
+          <p>
+            Du wirst wahrscheinlich die Layout Datei theme.liquid kennen. Auf ihr basiert fast jede Seite in deinem
+            Onlineshop.<br>
+            Die meisten Developer verbringen die meiste Zeit damit Sections Snippets und Templates zu programmieren,
+            deren Code innerhalb von theme.liquid verpackt ist.<br>
+            Der Vorteil davon ist, dass durch das hier eingebundene zentrale CSS File ein konsistentes Layout über alle
+            Seiten hinweg erzeugt wird.<br>
+            Weiterhin führt es dazu, dass globale Layout Änderungen sehr leicht vorgenommen werden können und das einmal
+            erstellt Layout wiederverwendet werden kann<br><br>
+            Dieses Konzept stößt allerdings an seine Grenzen, wenn Seiten erschaffen werden sollen, die ein komplett
+            anderes Designprinzip verfolgen<br>
+            Viele Developer versuchen jetzt mit Custom CSS das vorherige Layout zu überschreiben. Dies ist unsauber und
+            es gibt eine viel bessere Lösung
+          </p>
+          <h2>Ein häufiges Beispiel</h2>
+          <p>
+            Du wirst dich vielleicht fragen, in welchem Fall so ein neues Template hilfreich sein kann<br>
+            Ein häufiges Beispiel sind Landingpages, da diese mit ihrem speziellen Design den Kunden sofort zur
+            Kaufaktion bewegen sollen<br>
+            Außerdem ist eine Werbeaktion oft der einzige Weg wie ein Kunde auf diese Seiten kommen kann.<br>
+            Sie operieren also meist komplett unabhängig von den anderen Seiten des Onlineshops.
+          </p>
+          <h2>Erstellen eines neuen Layouts</h2>
+          <p>
+            Der Prozess ist sehr einfach.<br>
+            Als erstes muss ein neue Datei mit erstellt werden, die im Layout Ordner abgespeichert wird.<br>
+            Hier kann jetzt jeglicher HTML, CSS oder JS Code eingefügt werden, der auf allen Seiten sein soll, die das
+            neue Layout verwenden.
+          </p>
+          <img src="media/post1.jpg" alt="" />
+          <p>
+            Die folgenden Sachen müssen aber beachtet werden:
+            <ul>
+              <li>
+                <code>{{ content_for_header }}</code> muss im Head Tag platziert werden. Dies sorgt dafür dass alle
+                notwendigen Shopify Skripte hier inkludiert werden
+              </li>
+              <li>
+                <code>{{ content_for_layout }}</code> muss im Body Tag platziert werden. Dies sorgt dafür dass die
+                Template Dateien hier dynamisch gerendert werden.
+              </li>
+              <li>
+                <code>{% layout 'landing-page' %}</code> muss die erste Zeile in der Template Datei der Landingpages
+                heißen, die das neue Layout "landing-page.liquid" benutzen.
+              </li>
+            </ul>
+          </p>
+          <h2>Weiterführende Gedanken</h2>
+          <img src="media/post2.jpg" alt="" />
+          <p>
+            Manchmal kann es auch sehr nützlich sein überhaupt kein Layout File zu verwenden. Dies kann mit der ersten
+            Zeile <code>{% layout none %}</code> in der Template Datei gelöst werden.<br>
+            Dies kommt vorallem, dann zu Anwendung, wenn diese Seite komplett Standalone ist und das Layout auf keiner
+            anderen Seite verwendet wird.<br><br>
+            Es ist allerdings sehr wichtig trotzdem dem <abbr title="Don't Repeat Yourself">DRY</abbr> treu zu
+            bleiben.<br>
+            Dafür erweisen sich in Shopify sogenannte Snippets sehr vorteilhaft. Sie können durch den Befehl
+            <code>{% include snippet %}</code> sehr einfach eingebunden werden und erlauben eine simple Wiederverwendung
+            von Code<br><br>
+            Abschließend gilt zu sagen, dass auch wenn man es mit Alternative Layouts nicht übertreiben sollte, jeder
+            Developer dieses Konzept immer im Hinterkopf haben muss.
+          </p>
+          <h2>Referenzen</h2>
+          <ul>
+            <li><a target="_blank" rel="noreferrer" href="https://www.slicedbread.agency/blogs/shopify/leveraging-the-power-of-alternate-layouts-in-shopify">https://www.slicedbread.agency/blogs/shopify/leveraging-the-power-of-alternate-layouts-in-shopify
+              </a> </li>
+            <li>
+              <a target="_blank" rel="noreferrer"  href="https://www.shopify.com/partners/blog/84342470-the-power-of-alternate-layout-files-in-shopify-theme-development">https://www.shopify.com/partners/blog/84342470-the-power-of-alternate-layout-files-in-shopify-theme-development
+              </a> </li>
+          </ul>
+        </div>
+        <p class="back-link"><a href="index.html">Zurück zur Startseite</a></p>
+      </div>
+    </div>
+
+    <div class="more-blogs">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2>Weitere Beiträge</h2>
+          </div>
+        </div>
+        <div class="row blog-list">
+          <div class="col">
+            <img src="media/blog2.jpeg" alt="" />
+            <p class="category">Custom Apps</p>
+            <p class="title"><a href="custom-apps.html">Warum es oft vorteilhaft ist Apps selbst zu entwickeln</a></p>
+            <p class="more"><a href="custom-apps.html">Mehr Lesen</a></p>
+          </div>
+          <div class="col">
+            <img src="media/blog3.jpeg" alt="" />
+            <p class="category">Shopify Scripts</p>
+            <p class="title"><a href="shopify-scripts.html">Wofür Shopify Scripts verwendet werden können</a></p>
+            <p class="more"><a href="shopify-scripts.html">Mehr Lesen</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="row container">
+      <div class="col-3">
+        <p class="menu-title">Rechtliches</p>
+        <ul>
+          <li>
+            <a href="impressum.html">Impressum</a>
+          </li>
+          <li>
+            <a href="datenschutz.html">AGB - Datenschutz</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <p class="menu-title">Kontakt</p>
+        <ul>
+          <li>
+            <p style="margin:0px;">Telefon: +49 (0) 160 97585670</p>
+          </li>
+          <li>
+            <p style="margin:0px;">E-Mail: business@unipron.com</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <p class="menu-title">Social Media</p>
+        <ul class="social">
+          <li>
+            <a href="#"><img src="media/facebook.svg" alt="Facebook" /> Facebook</a>
+        </li>
+        <li>
+            <a href="#"><img src="media/instagram.svg" alt="Instagram" /> Instagram</a>
+        </li>
+        <li>
+            <a href="#"><img src="media/linkedin.svg" alt="Linkedin" /> Linkedin</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <div class="info container">
+      <div class="logo-wrap">
+        <img src="media/logo-new.svg" alt="Unipron" />
+      </div>
+      <p>© Copyright Unipron • All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="assets/jquery.min.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+
+</html>
