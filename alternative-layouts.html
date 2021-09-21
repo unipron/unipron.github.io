@@ -5,16 +5,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./assets/main.css" rel="stylesheet" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap"
-    rel="stylesheet">
+
+  <link href="assets/main.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://demo.gethugothemes.com/airspace/plugins/Ionicons/css/ionicons.min.css">
-  <script src="assets/jquery.min.js"></script>
+
   <link rel="icon" type="image/svg+xml" href="media/favicon-fix.svg">
-  <script defer="" src="assets/app.js"></script>
   <title>Unipron</title>
 </head>
 
@@ -24,8 +24,8 @@
       <div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1" class="nav w-nav">
         <div class="nav-inner">
           <div class="nav-logo-wrap">
-            <a href="index.html" class="brand w-nav-brand">
-              <img src="media/logo-new.svg" />
+            <a href="#" class="brand w-nav-brand" title="Unipron">
+              <img src="media/logo-new.svg" alt="Unipron" />
             </a>
           </div>
           <div class="nav-menu-wrap">
@@ -59,7 +59,7 @@
         </div>
         <h1>Alternative Layouts in Shopify</h1>
         <div class="post-banner">
-          <img src="media/blog1.jpeg" />
+          <img src="media/blog1.jpeg" alt="" />
         </div>
         <div class="content">
           <p>
@@ -110,7 +110,7 @@
             </ul>
           </p>
           <h3>Weiterführende Gedanken</h3>
-          <img src="media/post2.jpg" />
+          <img src="media/post2.jpg" alt="" />
           <p>
             Manchmal kann es auch sehr nützlich sein überhaupt kein Layout File zu verwenden. Dies kann mit der ersten
             Zeile <code>{% layout none %}</code> in der Template Datei gelöst werden.<br>
@@ -148,13 +148,13 @@
         </div>
         <div class="row blog-list">
           <div class="col">
-            <img src="media/blog2.jpeg" />
+            <img src="media/blog2.jpeg" alt="" />
             <p class="category">Custom Apps</p>
             <p class="title"><a href="custom-apps.html">Warum es oft vorteilhaft ist Apps selbst zu entwickeln</a></p>
             <p class="more"><a href="custom-apps.html">Mehr Lesen</a></p>
           </div>
           <div class="col">
-            <img src="media/blog3.jpeg" />
+            <img src="media/blog3.jpeg" alt="" />
             <p class="category">Shopify Scripts</p>
             <p class="title"><a href="shopify-scripts.html">Wofür Shopify Scripts verwendet werden können</a></p>
             <p class="more"><a href="shopify-scripts.html">Mehr Lesen</a></p>
@@ -205,11 +205,14 @@
     </div>
     <div class="info container">
       <div class="logo-wrap">
-        <img src="media/logo-new.svg" />
+        <img src="media/logo-new.svg" alt="Unipron" />
       </div>
       <p>© Copyright Unipron • All Rights Reserved</p>
     </div>
   </footer>
+
+  <script src="assets/jquery.min.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </body>
 
 </html>
