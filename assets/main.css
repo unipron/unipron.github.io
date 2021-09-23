@@ -345,8 +345,6 @@ body {
   }
 }
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -357,6 +355,7 @@ body {
   background-color:#262529;
 }
 .section-title h2 {
+  text-align:center;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 28px;
@@ -515,7 +514,6 @@ footer ul.social li a img {
 
 /* Added styles */
 html,body { 
-  overflow-x: hidden; 
   background-color: #3f2286;
 }
 .bg-white {
@@ -1016,7 +1014,20 @@ header.fixed-header {
     width: 19vh;
   }
 }
-@media screen and (max-width: 470px) {
+
+@media screen and (max-width: 300px) {
+	.banner-title h1 {
+    font-size: 25px;
+	}
+   }
+
+@media screen and (min-width: 300px) and (max-width: 380px) {
+	.banner-title h1 {
+    font-size: 30px;
+	}
+   }
+
+@media screen and (min-width:380px) and (max-width: 470px) {
 	.banner-title h1 {
     font-size: 35px;
 	}
