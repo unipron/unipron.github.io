@@ -530,7 +530,6 @@ html,body {
   -webkit-user-select: none;
   user-select: none;
 }
-#hammenu label { display: none; }
 #hammenu input {
   display: block;
   width: 25px;
