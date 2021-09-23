@@ -1301,6 +1301,7 @@ header.fixed-header {
 .project-page .project-detail .image img {
   width: 100%;
   object-fit: cover;
+  max-height: 600px;
 }
 .project-page .project-detail .info .info-inner {
   max-width: 70%;
