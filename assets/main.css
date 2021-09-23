@@ -530,6 +530,7 @@ html,body {
   -webkit-user-select: none;
   user-select: none;
 }
+#hammenu label { display: none; }
 #hammenu input {
   display: block;
   width: 25px;
@@ -566,9 +567,8 @@ html,body {
   opacity: 1;
   transform: rotate(45deg) translate(-5px, -2px);
 }
-#hammenu input:checked ~ span:nth-child(2) {
+#hammenu input:checked ~ span.span1 {
   opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
 }
 #hammenu input:checked ~ span:last-child {
   transform: rotate(-45deg) translate(0, -1px);
