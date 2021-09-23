@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://demo.gethugothemes.com/airspace/plugins/Ionicons/css/ionicons.min.css">
+    <script src="assets/jquery.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="media/favicon-fix.svg">
+    <script defer="" src="assets/app.js"></script>
+    <title>Unipron</title>
+</head>
+
+<body class="body project-page">
+  <header>
+    <div class="hero">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1"
+            class="nav w-nav">
+            <div class="nav-inner">
+                <div class="nav-logo-wrap">
+                    <a href="index.html" class="brand w-nav-brand">
+                        <img src="media/logo-new.svg" />
+                    </a>
+                </div>
+                <div class="nav-menu-wrap">
+                    <nav role="navigation" id="nav-menu" class="nav-menu-2 w-nav-menu">
+                        <a href="index.html#Leistungen" class="nav-link w-nav-link">Leistungen</a>
+                        <a href="index.html#about" class="nav-link w-nav-link">Über Uns</a>
+                        <a href="index.html#process" class="nav-link w-nav-link">Prozess</a>
+                        <a href="index.html#blog" class="nav-link w-nav-link">Blog</a>
+                        <a href="index.html#portfolio" class="nav-link w-nav-link">Portfolio</a>
+                        <a href="index.html#contact" class="nav-link w-nav-link">Kontakt</a>
+                    </nav>
+                    <div id="hammenu" class="menu-button w-nav-button">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <main class="bg-white">
+      <div class="project-wrapper">
+        <div class="container">
+          <h1>Member-Get-Member Project</h1>
+        </div>
+
+        <div class="project-detail">
+          <div class="info">
+            <div class="info-inner">
+              <h3>Referral Program: The Requirement</h3>
+              <p>Existing customers can refer their friends via email address. The referred friend will receive an email and will need to create an account to the store to receive his/her reward.</p>
+              <p>Once the referred friend makes his/her first purchase, the referrer will receive an email on how to get their reward, too!</p>
+            </div>
+            </div>
+          <div class="image">
+            <img src="media/proj_referral.png">
+          </div>
+        </div>
+
+        <div class="project-others container">
+          <h3>Referral Program: The Problem</h3>
+          <p>
+            The form will be hosted on a landing page within the store website.
+            The feature is to be coded on Liquid and will not use an app.
+          </p>
+          <ul>
+            <li>How do we determine if the referrer is a customer on the store?</li>
+            <li>How do we save the referrer's email address?</li>
+            <li>How do we trigger the automated emails?</li>
+          </ul>
+        </div>
+
+        <div class="project-others container">
+          <h3>Referral Program: The Solution</h3>
+          <img src="media/proj_referral2.jpg" loading="lazy" alt="" />
+          <p>
+            On submit of the referral form, an account will be made for the referred email address.<br>
+            The account will be tagged with "referral" and the email address of the referrer.
+          </p>
+          <p>
+            A separate server will handle the account checking for the referrer.
+            The server will:
+          </p>
+          <ul>
+            <li>Check the referrer's email address if it's already on the store</li>
+            <li>Tag the referrer's account with "referrer"</li>
+          </ul>
+          <p>For automated emails, <a href="https://apps.shopify.com/klaviyo-email-marketing" target="_blank">Klaviyo</a> app was used.
+          <br>We created 2 Klaviyo Segment for accounts that are tagged "referral" and "referrer".
+          <br>Automated emails were triggered by Klaviyo Flows whenever a profile is added to the segment.</p>
+        </div>
+
+        <div class="project-others container">
+          <h3>Referral Program: The Product</h3>
+          <p>
+            A landing page for the Member-Get-Member feature was created wherein existing customers can enter their email address and their friend's details.
+          </p>
+          <p>
+            Email templates on Klaviyo app were created.<br>
+            One for referrals which includes the a register button that goes straight to the website's account register page.<br>
+            Another one for referrers that has their reward details.
+          </p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+        <div class="row container">
+            <div class="col-3">
+                <p class="menu-title">Rechtliches</p>
+                <ul>
+                    <li>
+                        <a href="impressum.html">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="datenschutz.html">AGB - Datenschutz</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <p class="menu-title">Kontakt</p>
+                <ul>
+                    <li>
+                        <p style="margin:0px;">Telefon: +49 (0) 160 97585670</p>
+                    </li>
+                    <li>
+                        <p style="margin:0px;">E-Mail: business@unipron.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <p class="menu-title">Social Media</p>
+                <ul class="social">
+                    <li>
+                        <a href="#"><img src="media/facebook.svg" /> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="media/instagram.svg" /> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="media/linkedin.svg" /> Linkedin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="info container">
+            <div class="logo-wrap">
+              <img src="media/logo-new.svg" />
+            </div>
+            <p>© Copyright Unipron • All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

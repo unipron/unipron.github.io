@@ -1284,7 +1284,7 @@ header.fixed-header {
   text-align: center;
   font-size: 40px;
   line-height: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
 .project-page .project-detail {
   display: flex;
@@ -1292,6 +1292,7 @@ header.fixed-header {
   align-items: center;
   font-size: 17px;
   line-height: 24px;
+  padding-bottom: 60px;
 }
 .project-page .project-detail .info,
 .project-page .project-detail .image {
@@ -1309,7 +1310,7 @@ header.fixed-header {
 .project-page .project-others {
   font-size: 17px;
   line-height: 24px;
-  margin-top: 40px;
+  margin-top: 80px;
   padding-bottom: 40px;
 }
 .project-page .project-others .inner {
@@ -1319,6 +1320,10 @@ header.fixed-header {
 }
 .project-page .project-others .inner h3 {
   padding-top: 60px;
+}
+.project-page .project-others img {
+  width: 600px;
+  max-width: 100%;
 }
 @media screen and (max-width: 991px) {
   .content-page footer,

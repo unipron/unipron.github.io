@@ -1,7 +1,6 @@
-/* a better way to add/remove class */
-$('#hammenu input').on('click', function(e) {
-  $('#nav-menu').toggleClass('mobile-menu-vis');
-});
+ $('#hammenu input').on('click', function(e) {
+   $('#nav-menu').toggleClass('mobile-menu-vis');
+ });
 
 /* scroll to section - use below class on any link that scrolls to another section */
 $('.scroll-link').on('click', function(e) {
