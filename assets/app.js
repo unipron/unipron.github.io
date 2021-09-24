@@ -1,28 +1,38 @@
- $('#hammenu input').on('click', function(e) {
-   $('#nav-menu').toggleClass('mobile-menu-vis');
- });
-
-/* scroll to section - use below class on any link that scrolls to another section */
-$('.scroll-link').on('click', function(e) {
-  e.preventDefault();
-  var section = $(this).attr('href');
-  $('html, body').animate({ scrollTop: $(section).offset().top }, 600);
-});
+function toggleClass() {
+  var element = document.getElementById("nav-menu");
+  element.classList.toggle("mobile-menu-vis");
+}
 
 // sticky header
-$(window).scroll(function(){
-  if ($(window).scrollTop() >= 100) {
-    $('header').addClass('fixed-header');
-  }
-  else {
-    $('header').removeClass('fixed-header');
+document.addEventListener('scroll', function(e) {
+  if(document.documentElement.scrollTop >= 100) {
+    document.getElementById("header").classList.add("fixed-header");
+  } else {
+    document.getElementById("header").classList.remove("fixed-header");
   }
 });
 
-$('.banner-title h1:first-child').on('animationend webkitAnimationEnd', function() { 
-  $(this).addClass('no-cursor');
+/* scroll to section - use below class on any link that scrolls to another section */
+document.querySelectorAll('.scroll-link a[href^="#"]').forEach(trigger => {
+  trigger.onclick = function(e) {
+    e.preventDefault();
+    let hash = this.getAttribute('href');
+    let target = document.querySelector(hash);
+    let headerOffset = 100;
+    let elementPosition = target.offsetTop;
+    let offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  };
 });
 
-$('.banner-title h1:last-child').on('animationend webkitAnimationEnd', function() { 
-  $(this).addClass('no-cursor');
+document.getElementById("banner-title1").addEventListener("webkitAnimationEnd", (ev) => {
+  document.getElementById("banner-title1").classList.add("no-cursor");
+});
+
+document.getElementById("banner-title2").addEventListener("webkitAnimationEnd", (ev) => {
+  document.getElementById("banner-title2").classList.add("no-cursor");
 });

@@ -1,6 +1,6 @@
-/* * {
-  box-sizing: border-box;
-} */
+* {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
 }
@@ -534,6 +534,7 @@ html,body {
   -webkit-user-select: none;
   user-select: none;
 }
+#hammenu label { display: none; }
 #hammenu input {
   display: block;
   width: 25px;
