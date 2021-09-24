@@ -30,10 +30,12 @@ document.querySelectorAll('.scroll-link a[href^="#"]').forEach(trigger => {
   };
 });
 
-document.getElementById("banner-title1").addEventListener("webkitAnimationEnd", (ev) => {
-  document.getElementById("banner-title1").classList.add("no-cursor");
-});
-
-document.getElementById("banner-title2").addEventListener("webkitAnimationEnd", (ev) => {
-  document.getElementById("banner-title2").classList.add("no-cursor");
-});
+if (document.body.classList.contains('index')) {
+  document.getElementById("banner-title1").addEventListener("webkitAnimationEnd", (ev) => {
+    document.getElementById("banner-title1").classList.add("no-cursor");
+  });
+  
+  document.getElementById("banner-title2").addEventListener("webkitAnimationEnd", (ev) => {
+    document.getElementById("banner-title2").classList.add("no-cursor");
+  });
+}
