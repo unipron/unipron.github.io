@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link href="assets/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>Cart drawer</title>
+</head>
+
+<body class="body project-page">
+  <header id="header">
+    <div class="hero">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1"
+            class="nav w-nav">
+            <div class="nav-inner">
+                <div class="nav-logo-wrap">
+                    <a href="index.html" class="brand w-nav-brand">
+                      <img src="media/logo-new.svg" alt="Unipron" width="180" height="55" />
+                    </a>
+                </div>
+                <div class="nav-menu-wrap">
+                    <nav role="navigation" id="nav-menu" class="nav-menu-2 w-nav-menu">
+                        <a href="index.html#Leistungen" class="nav-link w-nav-link">Leistungen</a>
+                        <a href="index.html#about" class="nav-link w-nav-link">Über Uns</a>
+                        <a href="index.html#process" class="nav-link w-nav-link">Prozess</a>
+                        <a href="index.html#blog" class="nav-link w-nav-link">Blog</a>
+                        <a href="index.html#portfolio" class="nav-link w-nav-link">Portfolio</a>
+                        <a href="index.html#contact" class="nav-link w-nav-link">Kontakt</a>
+                    </nav>
+                    <div id="hammenu" class="w-nav-button">
+                      <button id="checkmenu" onclick="toggleClass()" aria-label="Menu">
+                          <span class="span1"></span>
+                          <span class="span2"></span>
+                          <span class="span3"></span>
+                     </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <main class="bg-white">
+      <div class="project-wrapper">
+        <div class="container">
+          <h1>Customizations on cart drawer</h1>
+        </div>
+
+        <div class="project-detail">
+          <div class="image">
+            <img src="media/theme-transfer.jpg" alt="Project featured image" width="900" height="500" />
+          </div>
+          <div class="info">
+            <div class="info-inner">
+              <h3>Cart drawer type</h3>
+              <p>The Prestige theme already has a cart drawer feature.</p>
+              <p>This functionality was further extended by adding a discount code checker on the cart itself.</p>  
+            </div>
+            </div>
+        </div>
+
+        <div class="project-others container">
+          <h3>How it works</h3>
+          <p>
+            A separate JS file is called and it contains JSON data of all the discount codes and the discount details on the store.<br>
+            This file gets updated by a Google Cloud Server.<br>
+            This server retrieves the data via API processes and then logs them in the JS file.
+          </p>
+          <p>
+            All important data needed for calculations and checking are in the JS file:
+          </p>
+          <ul>
+            <li>discount code valid</li>
+            <li>accepted products</li>
+            <li>discount type</li>
+            <li>discount value</li>
+            <li>discount minimum price</li>
+            <li>number of uses</li>
+          </ul>
+          <p>
+            With these data, the line items can be easily manipulated for every cart change.
+          </p>
+          <p>
+            On click of the checkout button, the discount code is added to the checkout url so it will be automatically applied on the checkout page.</p>
+          </p>
+          <p>
+            The discount code last used is also stored in a cookie - so the cart automatically applies it every time the customer access the store.</p>
+          </p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+        <div class="row container">
+            <div class="col-2">
+                <p class="menu-title">Rechtliches</p>
+                <ul>
+                    <li>
+                        <a href="impressum.html">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="datenschutz.html">AGB - Datenschutz</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <p class="menu-title">Kontakt</p>
+                <ul>
+                    <li>
+                        <p style="margin:0px;">Telefon: +49 (0) 160 97585670</p>
+                    </li>
+                    <li>
+                        <p style="margin:0px;">E-Mail: business@unipron.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="info container">
+            <div class="logo-wrap">
+              <img src="media/logo-new.svg" alt="Unipron" width="180" height="55" />
+            </div>
+            <p>© Copyright Unipron • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    
+    <script src="assets/app.js" defer></script>
+</body>
+
+</html>
