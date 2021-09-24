@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link href="assets/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>Custom Page template</title>
+</head>
+
+<body class="body project-page">
+  <header id="header">
+    <div class="hero">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1"
+            class="nav w-nav">
+            <div class="nav-inner">
+                <div class="nav-logo-wrap">
+                    <a href="index.html" class="brand w-nav-brand">
+                      <img src="media/logo-new.svg" alt="Unipron" width="180" height="55" />
+                    </a>
+                </div>
+                <div class="nav-menu-wrap">
+                    <nav role="navigation" id="nav-menu" class="nav-menu-2 w-nav-menu">
+                        <a href="index.html#Leistungen" class="nav-link w-nav-link">Leistungen</a>
+                        <a href="index.html#about" class="nav-link w-nav-link">Über Uns</a>
+                        <a href="index.html#process" class="nav-link w-nav-link">Prozess</a>
+                        <a href="index.html#blog" class="nav-link w-nav-link">Blog</a>
+                        <a href="index.html#portfolio" class="nav-link w-nav-link">Portfolio</a>
+                        <a href="index.html#contact" class="nav-link w-nav-link">Kontakt</a>
+                    </nav>
+                    <div id="hammenu" class="w-nav-button">
+                      <button id="checkmenu" onclick="toggleClass()" aria-label="Menu">
+                          <span class="span1"></span>
+                          <span class="span2"></span>
+                          <span class="span3"></span>
+                     </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <main class="bg-white">
+      <div class="project-wrapper">
+        <div class="container">
+          <h1>Custom Page template</h1>
+        </div>
+
+        <div class="project-detail">
+          <div class="image">
+            <img src="media/question.jpg" alt="Project featured image" width="900" height="500" />
+          </div>
+          <div class="info">
+            <div class="info-inner">
+              <h3>Bärater page template</h3>
+              <p>A completely custom page template that consists of questions and choices the customer can answer.</p>
+              <p>At the end of the question set, recommended products will show on the page based on the answers.</p>  
+            </div>
+            </div>
+        </div>
+
+        <div class="project-others container">
+          <h3>Landing page</h3>
+          <p>
+            The landing page consists of an image banner and some additional details.
+          </p>
+          <p>
+            The last section is the questionnaire.
+          </p>
+          <p>
+            Every question is displayed separately.<br>
+            When an answer is selected, the Next button will enable and will let you proceed to the next section.
+          </p>
+          <p>
+            The answers accepted depends on the question.<br>
+            Other questions accept multiple answers. It's also possible to de-select answers.
+          </p>
+          <p>
+            At the last question, the button switches to Submit.<br>
+            Once clicked, it hides the question and displays a completely new section in its place.<br>
+            The section shows the recommended products.
+          </p>
+          <p>
+            The products to be shown are based on a hard-coded logic of answer sets.
+            It's possible to add the product directly to cart once it's shown.
+          </p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+        <div class="row container">
+            <div class="col-2">
+                <p class="menu-title">Rechtliches</p>
+                <ul>
+                    <li>
+                        <a href="impressum.html">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="datenschutz.html">AGB - Datenschutz</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <p class="menu-title">Kontakt</p>
+                <ul>
+                    <li>
+                        <p style="margin:0px;">Telefon: +49 (0) 160 97585670</p>
+                    </li>
+                    <li>
+                        <p style="margin:0px;">E-Mail: business@unipron.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="info container">
+            <div class="logo-wrap">
+              <img src="media/logo-new.svg" alt="Unipron" width="180" height="55" />
+            </div>
+            <p>© Copyright Unipron • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    
+    <script src="assets/app.js" defer></script>
+</body>
+
+</html>
