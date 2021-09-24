@@ -1,6 +1,7 @@
 function toggleClass() {
   var element = document.getElementById("nav-menu");
   element.classList.toggle("mobile-menu-vis");
+  document.getElementById("checkmenu").classList.toggle("clicked");
 }
 
 // sticky header
