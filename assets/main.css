@@ -1023,6 +1023,10 @@ header.fixed-header {
   right: 8%;
   width: 26vh;
 }
+.icon-3 img {
+  height: auto;
+  width: auto;
+}
  
 @media screen and (max-width: 1180px) and (min-width: 620px) {
   .icon-3 {
