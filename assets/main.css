@@ -670,8 +670,10 @@ footer {
 .icon-w-text div {
   width: 47%;
 }
-.icon-w-text img {
+.icon-w-text img,
+#blog .blog-list .blog-item img {
   width: auto;
+  height: auto;
 }
 .text-right {
   text-align: right;
