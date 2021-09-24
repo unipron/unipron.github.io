@@ -652,7 +652,7 @@ footer {
 .nav-logo-wrap a { width: 100%; }
 .arrow {
   text-align: center;
-  z-index: 9999;
+  z-index: 999;
 }
 .arrow img {
   width: 30px;
