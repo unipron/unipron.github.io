@@ -13,6 +13,119 @@ body {
   background-color: transparent;
   font-family: "Work Sans", sans-serif;
 }
+img {
+  max-width: 100%;
+}
+
+/**
+ * ----------------------------------------------------------------------------------------------
+ * Flickity styles
+ * ----------------------------------------------------------------------------------------------
+ */
+
+ .flickity-enabled {
+  position: relative;
+}
+
+body:not(.is-tabbing) .flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+.flickity-enabled {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flickity-enabled.is-draggable {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- previous/next buttons ---- */
+.flickity-prev-next-button {
+  position: absolute;
+}
+
+.flickity-prev-next-button[disabled] {
+  opacity: 0;
+}
+
+.flickity-prev-next-button svg {
+  width: auto;
+  height: 18px;
+  stroke-width: 1.5px;
+  stroke: currentColor;
+}
+
+/* ---- page dots ---- */
+.flickity-page-dots {
+  width: 100%;
+  padding: 0;
+  margin: 22px 0 0 0;
+  list-style: none;
+  text-align: center;
+}
+
+.flickity-page-dots .dot {
+  position: relative;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 0 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out; /* This is used to increase the clickable area */
+}
+
+.flickity-page-dots .dot::before {
+  position: absolute;
+  content: "";
+  top: -6px;
+  right: -6px;
+  left: -6px;
+  bottom: -6px;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: currentColor;
+  border-color: currentColor;
+}
+
+@media screen and (min-width: 641px) {
+  .flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 7px;
+    border-width: 2px;
+  }
+}
+
 
 header {
   padding: 10px 0;
@@ -20,7 +133,7 @@ header {
 main {
   padding: 80px 0;
 }
-main h1 {
+main h1.title {
   max-width: 60%;
   margin: auto;
   text-align: center;
@@ -47,7 +160,6 @@ footer ul li a {
 footer ul li:first-child {
   margin-right: 30px;
 }
-
 @media screen and (max-width: 767px) {
   header {
     text-align: center;
@@ -57,9 +169,225 @@ footer ul li:first-child {
   main {
     padding: 20px 0;
   }
-  main h1 {
+  main h1.title {
     max-width: 100%;
     font-size: 24px;
   }
   .subtitle { font-size: 16px; }
+}
+
+
+/* Product page */
+.product-page-emulate {
+  padding: 80px 0;
+  position: relative;
+  margin-bottom: 80px;
+}
+.Product__Wrapper {
+  max-width: calc(100% - 650px);
+}
+.Product__Slideshow {
+  width: 90%;
+  margin: auto;
+}
+.Product__SlideItem--hidden {
+  display: none;
+}
+.Product__SlideshowNav--thumbnails {
+  display: flex;
+  justify-content: center;
+}
+.Product__SlideshowNav--thumbnails .Product__SlideshowNavImage {
+  width: 70px;
+  margin: 10px;
+}
+.Product__InfoWrapper {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  height: 100%;
+}
+.Product__Info {
+  width: 600px;
+  max-width: 600px;
+}
+.form-box {
+  background-color: #f3f2f3;
+  padding: 10px 10px 20px;
+  margin-top: 30px;
+}
+.ProductMeta__PriceList { display: inline-block; }
+.ProductMeta__Price {
+  font-size: 25px;
+  letter-spacing: .1em;
+  font-weight: 600;
+}
+.bwb_pstage_price_note {
+  font-weight: 600;
+}
+.review {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.fa-star.checked {
+  color: #ffce00;
+}
+.product__note p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.Price--highlight {
+  color: #f94c43;
+}
+.Price--compareAt {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.Price--compareAt.hidden {
+  display: none;
+}
+.Price--compareAt::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -.4em;
+  width: calc(100% + .8em);
+  height: 1px;
+  background: currentColor;
+}
+.SizeSwatch__Radio {
+  display: none;
+}
+.SizeSwatch__Radio:checked+.SizeSwatch img {
+  opacity: 1!important;
+}
+.SizeSwatchList {
+  list-style-type: none;
+  padding: 10px 0;
+}
+.SizeSwatchList li {
+  width: 25%;
+  margin: 0;
+  display: inline-block;
+}
+.SizeSwatchList li:not(:first-child) {
+  margin-left: -6px;
+}
+.SizeSwatchList li label:hover {
+  cursor: pointer;
+}
+.SizeSwatch span {
+  display: block;
+  text-align: center;
+  background: #fff;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 3px 0;
+}
+.SizeSwatch span.is-active {
+  background-color: #e25173 !important;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 3px;
+}
+.SizeSwatch img { 
+  opacity: .5; 
+  max-width: 85%;
+}
+.ProductForm__AddToCart {
+  height: 45px;
+  padding: 10px;
+  color: #ffffff;
+  background: #e25173;
+  border-color: #e25173;
+  -webkit-appearance: button;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+@media screen and (max-width: 767px) {
+  .product-page-emulate {
+    margin-bottom: 0;;
+  }
+  .Product__Wrapper,
+  .Product__Info {
+    max-width: 100%;
+  }
+  .Product__InfoWrapper {
+    position: unset;
+  }
+  .ProductMeta__Title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .ProductMeta {
+    padding: 0 15px;
+  }
+}
+
+
+.bwb-conf {
+	box-sizing: border-box;
+}
+.has-margin-left {
+	margin-left: 5px;
+}
+.has-margin-right {
+	margin-right: 5px;
+}
+.bwb-conf .conf-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 5px;
+}
+.bwb-conf .conf-item {
+	flex: 0 0 50%;
+	max-width: calc(50% - 5px);
+	background-color: #f3f2f3;
+	padding: 5px 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+}
+.bwb-conf .full-conf-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+}
+.bwb-conf .full-conf-item {
+	display: flex;
+	align-items: center;
+      justify-content: center;
+    width: 100%;
+}
+.bwb-conf .conf-icon {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.bwb-conf .conf-icon img {
+	max-width: 29px;
+	height: 32px;
+}
+.bwb-conf .conf-text {
+	padding-left: 15px;
+	color: #5e5e5e;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+}
+@media only screen and (max-width: 798px) {
+  .bwb-conf .conf-text {
+    font-size: 10px !important;
+  }
 }
