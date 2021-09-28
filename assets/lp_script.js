@@ -33,4 +33,5 @@ document.querySelectorAll('.SizeSwatch__Radio').forEach(trigger => {
 function closeDrawer() {
   var element = document.getElementById("cart");
   element.setAttribute('aria-hidden', true);
+  document.querySelector('.PageOverlay').classList.remove("is-visible");
 }
