@@ -1021,7 +1021,7 @@ header.fixed-header {
   position: absolute;
   bottom: 8%;
   right: 8%;
-  width: 26vh;
+  width: 52vh;
 }
 .icon-3 img {
   height: auto;
@@ -1030,7 +1030,7 @@ header.fixed-header {
  
 @media screen and (max-width: 1180px) and (min-width: 620px) {
   .icon-3 {
-    width: 19vh;
+    width: 38vh;
   }
 }
 
@@ -1075,12 +1075,16 @@ header.fixed-header {
     to{width: 100%;}
   }
   .icon-3 {
-    width: 21vh;
+    width: 42vh;
     bottom: 12%;
     right: 8%;
   }
 }
-
+@media screen and (max-width:400px){
+  .icon-3{
+  right:unset;
+  }
+}
 #process {
   padding-bottom: 100px;
 }
