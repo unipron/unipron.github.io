@@ -32,7 +32,7 @@
       </div>
 
       <div class="product-page-emulate">
-        <div class="PageOverlay is-visible"></div>
+        <div class="PageOverlay"></div>
         <div class="container">
           <div class="Product__Wrapper">
             <div class="Product__Gallery  Product__Gallery--withThumbnails">
@@ -119,55 +119,42 @@
                   </div>
                   <span class="product__note" style="color: #007600;font-size: 14px;">in 1-2 Werktagen bei Dir zu Hause</span>
 
-                  <form method="post" action="/cart/add" id="product_form_4165937070127" accept-charset="UTF-8" class="ProductForm" enctype="multipart/form-data">
-                    <input type="hidden" name="form_type" value="product">
-                    <input type="hidden" name="utf8" value="✓">
-                    
-                    <div class="ProductForm__Variants  mul-variant">
-                      <div class="ProductForm__Option ProductForm__Option--labelled">
-                        <span class="ProductForm__Label"></span>
-                        <ul class="SizeSwatchList HorizontalList HorizontalList--spacingTight">
-                          <li class="HorizontalList__Item">
-                            <input id="option-product-variant-select-template-0-0" class="SizeSwatch__Radio" type="radio" name="option-0" value="Einzeln" checked="checked" data-option-position="1" data-info="16,60€ /100g" data-price="€24,90" data-orig-price="0">
-                            <label for="option-product-variant-select-template-0-0" class="SizeSwatch">
-                              <img src="media/shopify/variant1.jpeg" alt="Einzeln">
-                              <span class="variant-titles is-active" data-index="0" data-value="Einzeln">Einzeln</span>
-                            </label>
-                          </li>
-                          <li class="HorizontalList__Item">
-                            <input id="option-product-variant-select-template-0-1" class="SizeSwatch__Radio" type="radio" name="option-0" value="10% Rabatt" data-option-position="1" data-info="14,93€/100g" data-price="€44,80" data-orig-price="€49,80">
-                            <label for="option-product-variant-select-template-0-1" class="SizeSwatch">
-                              <img src="media/shopify/variant2.jpeg" alt="10% Rabatt">
-                              <span class="variant-titles " data-index="1" data-value="10% Rabatt">10% Rabatt</span>
-                            </label>
-                          </li>
-                          <li class="HorizontalList__Item">
-                            <input id="option-product-variant-select-template-0-2" class="SizeSwatch__Radio" type="radio" name="option-0" value="15% Rabatt" data-option-position="1" data-info="14,11€/100g" data-price="€63,50" data-orig-price="74,70">
-                            <label for="option-product-variant-select-template-0-2" class="SizeSwatch">
-                              <img src="media/shopify/variant3.jpeg" alt="15% Rabatt">
-                              <span class="variant-titles " data-index="2" data-value="15% Rabatt">15% Rabatt</span>
-                            </label>
-                          </li>
-                          <li class="HorizontalList__Item">
-                            <input id="option-product-variant-select-template-0-3" class="SizeSwatch__Radio" type="radio" name="option-0" value="20% Rabatt" data-option-position="1" data-info="13,28€/100g" data-price="€79,70" data-orig-price="€99,60">
-                            <label for="option-product-variant-select-template-0-3" class="SizeSwatch">
-                              <img src="media/shopify/variant4.jpeg" alt="20% Rabatt">
-                              <span class="variant-titles " data-index="3" data-value="20% Rabatt">20% Rabatt</span>
-                            </label>
-                          </li>
-                        </ul>      
-                      </div>
-                  
-                      <div class="no-js ProductForm__Option">
-                        <!-- <div class="Select Select--primary">
-                          <svg class="Icon Icon--select-arrow" role="presentation" viewBox="0 0 19 12">
-                            <polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
-                          </svg>
-                          <select id="product-select-4165937070127" name="id" title="Variant"><option selected="selected" value="40773715067068" data-sku="0745114177582">Einzeln - €24,90</option><option value="40773715099836" data-sku="2X745114177589">10% Rabatt - €44,80</option><option value="40773715132604" data-sku="3X745114177589">15% Rabatt - €63,50</option><option value="40773715165372" data-sku="4X745114177589">20% Rabatt - €79,70</option></select>
-                        </div> -->
-                      </div>
-                    <input type="hidden" name="quantity" value="1"></div><button type="submit" data-use-primary-button="true" class="ProductForm__AddToCart Button Button--primary mul-variant" data-action="add-to-cart"><span>In den Warenkorb</span></button>
-                  </form>
+                  <div class="ProductForm__Variants  mul-variant">
+                    <div class="ProductForm__Option ProductForm__Option--labelled">
+                      <span class="ProductForm__Label"></span>
+                      <ul class="SizeSwatchList HorizontalList HorizontalList--spacingTight">
+                        <li class="HorizontalList__Item">
+                          <input id="option-product-variant-select-template-0-0" class="SizeSwatch__Radio" type="radio" name="option-0" value="Einzeln" checked="checked" data-option-position="1" data-info="16,60€ /100g" data-price="€24,90" data-orig-price="0">
+                          <label for="option-product-variant-select-template-0-0" class="SizeSwatch">
+                            <img src="media/shopify/variant1.jpeg" alt="Einzeln">
+                            <span class="variant-titles is-active" data-index="0" data-value="Einzeln">Einzeln</span>
+                          </label>
+                        </li>
+                        <li class="HorizontalList__Item">
+                          <input id="option-product-variant-select-template-0-1" class="SizeSwatch__Radio" type="radio" name="option-0" value="10% Rabatt" data-option-position="1" data-info="14,93€/100g" data-price="€44,80" data-orig-price="€49,80">
+                          <label for="option-product-variant-select-template-0-1" class="SizeSwatch">
+                            <img src="media/shopify/variant2.jpeg" alt="10% Rabatt">
+                            <span class="variant-titles " data-index="1" data-value="10% Rabatt">10% Rabatt</span>
+                          </label>
+                        </li>
+                        <li class="HorizontalList__Item">
+                          <input id="option-product-variant-select-template-0-2" class="SizeSwatch__Radio" type="radio" name="option-0" value="15% Rabatt" data-option-position="1" data-info="14,11€/100g" data-price="€63,50" data-orig-price="74,70">
+                          <label for="option-product-variant-select-template-0-2" class="SizeSwatch">
+                            <img src="media/shopify/variant3.jpeg" alt="15% Rabatt">
+                            <span class="variant-titles " data-index="2" data-value="15% Rabatt">15% Rabatt</span>
+                          </label>
+                        </li>
+                        <li class="HorizontalList__Item">
+                          <input id="option-product-variant-select-template-0-3" class="SizeSwatch__Radio" type="radio" name="option-0" value="20% Rabatt" data-option-position="1" data-info="13,28€/100g" data-price="€79,70" data-orig-price="€99,60">
+                          <label for="option-product-variant-select-template-0-3" class="SizeSwatch">
+                            <img src="media/shopify/variant4.jpeg" alt="20% Rabatt">
+                            <span class="variant-titles " data-index="3" data-value="20% Rabatt">20% Rabatt</span>
+                          </label>
+                        </li>
+                      </ul>      
+                    </div>
+                  </div>
+                  <button type="submit" onclick="addToCart()" data-use-primary-button="true" class="ProductForm__AddToCart Button Button--primary mul-variant" data-action="add-to-cart"><span>In den Warenkorb</span></button>
 
                 </div>
 
@@ -213,7 +200,7 @@
           </div>
         </div>
 
-        <div id="cart" class="cart-drawer" aria-hidden="false">
+        <div id="cart" class="cart-drawer" aria-hidden="true">
           <div class="Drawer__Header Drawer__Container">
               <span class="Drawer__Title Heading u-h4">Warenkorb</span>
         
@@ -229,8 +216,9 @@
 
           <div class="Drawer__Main" data-scrollable=""><div class="Drawer__Container">
             <div class="Cart__ItemList">
-              <div class="CartItemWrapper " data-variant="40773715099836">
-                <a href="#" class="CartItem__Remove Link" data-quantity="0" data-line="1" data-action="remove-item">
+              <div class="CartItemWrapper" id="variant1" data-variant="Einzeln">
+                <div class="inner">
+                <a href="#" class="CartItem__Remove Link" data-elem="variant1" data-qty="quantity_text_1" data-action="remove-item">
                   <svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
                     <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
                   </svg>
@@ -238,24 +226,24 @@
                 <div class="CartItem">
                   <div class="CartItem__ImageWrapper AspectRatio">
                     <div class="AspectRatio" style="--aspect-ratio: 1.0">
-                      <img class="CartItem__Image" src="media/shopify/variant2.jpeg" alt="Ah-mazing Hair Vitamin mit Biotin, zuckerfrei">
+                      <img class="CartItem__Image" src="media/shopify/variant1.jpeg" alt="Ah-mazing Hair Vitamin mit Biotin, zuckerfrei">
                     </div>
                   </div>
                   <div class="CartItem__Info">
                     <h2 class="CartItem__Title">
                       Ah-mazing Hair Vitamin mit Biotin, zuckerfrei
                     </h2>
-                    <div class="CartItem__Meta Heading Text--subdued"><p class="CartItem__Variant">10% Rabatt</p></div>
+                    <div class="CartItem__Meta Heading Text--subdued"><p class="CartItem__Variant">Einzeln</p></div>
                     <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
                       <div class="CartItem__QuantitySelector">
                         <div class="QuantitySelector">
-                          <button class="QuantitySelector__Button Link Link--primary" title="Setze die Menge auf 0" data-quantity="0" data-line="1" data-action="update-item-quantity">
+                          <button class="QuantitySelector__Button minus-btn Link Link--primary" title="Setze die Menge auf 0" data-elem="variant1" data-qty="quantity_text_1" data-action="update-item-quantity">
                             <svg class="Icon Icon--minus" role="presentation" viewBox="0 0 16 2">
                               <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square"></path>
                             </svg>
                           </button>
-                          <input type="text" name="updates[]" id="" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" data-line="1" value="1">
-                          <button class="QuantitySelector__Button Link Link--primary" title="Setze die Menge auf 2" data-quantity="2" data-line="1" data-action="update-item-quantity">
+                          <input type="text" id="quantity_text_1" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" value="0">
+                          <button class="QuantitySelector__Button plus-btn Link Link--primary" title="Setze die Menge auf 2"data-action="update-item-quantity">
                             <svg class="Icon Icon--plus" role="presentation" viewBox="0 0 16 16">
                               <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
                                 <path d="M8,1 L8,15"></path>
@@ -266,13 +254,155 @@
                         </div>
                       </div>
                       <div class="CartItem__PriceList">
-                        <span class="CartItem__Price Price Price--compareAt">€49,80</span>
-                          <span class="CartItem__OriginalPrice Price">€44,80</span>
+                        <span class="CartItem__Price Price">€24,90</span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                </div>
+
+                <div class="CartItemWrapper" id="variant2" data-variant="10% Rabatt">
+                  <div class="inner">
+                  <a href="#" data-elem="variant2" data-qty="quantity_text_2" class="CartItem__Remove Link" data-action="remove-item">
+                    <svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+                      <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                    </svg>
+                  </a>
+                  <div class="CartItem">
+                    <div class="CartItem__ImageWrapper AspectRatio">
+                      <div class="AspectRatio" style="--aspect-ratio: 1.0">
+                        <img class="CartItem__Image" src="media/shopify/variant2.jpeg" alt="Ah-mazing Hair Vitamin mit Biotin, zuckerfrei">
+                      </div>
+                    </div>
+                    <div class="CartItem__Info">
+                      <h2 class="CartItem__Title">
+                        Ah-mazing Hair Vitamin mit Biotin, zuckerfrei
+                      </h2>
+                      <div class="CartItem__Meta Heading Text--subdued"><p class="CartItem__Variant">10% Rabatt</p></div>
+                      <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+                        <div class="CartItem__QuantitySelector">
+                          <div class="QuantitySelector">
+                            <button class="QuantitySelector__Button minus-btn Link Link--primary" title="Setze die Menge auf 0" data-elem="variant2" data-qty="quantity_text_2" data-action="update-item-quantity">
+                              <svg class="Icon Icon--minus" role="presentation" viewBox="0 0 16 2">
+                                <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square"></path>
+                              </svg>
+                            </button>
+                            <input type="text" id="quantity_text_2" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" value="0">
+                            <button class="QuantitySelector__Button plus-btn Link Link--primary" title="Setze die Menge auf 2" data-action="update-item-quantity">
+                              <svg class="Icon Icon--plus" role="presentation" viewBox="0 0 16 16">
+                                <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                  <path d="M8,1 L8,15"></path>
+                                  <path d="M1,8 L15,8"></path>
+                                </g>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="CartItem__PriceList">
+                          <span class="CartItem__Price Price Price--compareAt">€49,80</span>
+                            <span class="CartItem__OriginalPrice Price">€44,80</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="CartItemWrapper" id="variant3" data-variant="15% Rabatt">
+                    <div class="inner">
+                    <a href="#" data-elem="variant3" data-qty="quantity_text_3" class="CartItem__Remove Link" data-action="remove-item">
+                      <svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+                        <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                      </svg>
+                    </a>
+                    <div class="CartItem">
+                      <div class="CartItem__ImageWrapper AspectRatio">
+                        <div class="AspectRatio" style="--aspect-ratio: 1.0">
+                          <img class="CartItem__Image" src="media/shopify/variant2.jpeg" alt="Ah-mazing Hair Vitamin mit Biotin, zuckerfrei">
+                        </div>
+                      </div>
+                      <div class="CartItem__Info">
+                        <h2 class="CartItem__Title">
+                          Ah-mazing Hair Vitamin mit Biotin, zuckerfrei
+                        </h2>
+                        <div class="CartItem__Meta Heading Text--subdued"><p class="CartItem__Variant">15% Rabatt</p></div>
+                        <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+                          <div class="CartItem__QuantitySelector">
+                            <div class="QuantitySelector">
+                              <button class="QuantitySelector__Button minus-btn Link Link--primary" title="Setze die Menge auf 0"data-elem="variant3" data-qty="quantity_text_3" data-action="update-item-quantity">
+                                <svg class="Icon Icon--minus" role="presentation" viewBox="0 0 16 2">
+                                  <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square"></path>
+                                </svg>
+                              </button>
+                              <input type="text" id="quantity_text_3" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" value="0">
+                              <button class="QuantitySelector__Button plus-btn Link Link--primary" title="Setze die Menge auf 2" data-action="update-item-quantity">
+                                <svg class="Icon Icon--plus" role="presentation" viewBox="0 0 16 16">
+                                  <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                    <path d="M8,1 L8,15"></path>
+                                    <path d="M1,8 L15,8"></path>
+                                  </g>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="CartItem__PriceList">
+                            <span class="CartItem__Price Price Price--compareAt">€74,70</span>
+                              <span class="CartItem__OriginalPrice Price">€63,50</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="CartItemWrapper" id="variant4" data-variant="20% Rabatt">
+                      <div class="inner">
+                      <a href="#" data-elem="variant4" data-qty="quantity_text_4" class="CartItem__Remove Link" data-action="remove-item">
+                        <svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+                          <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                        </svg>
+                      </a>
+                      <div class="CartItem">
+                        <div class="CartItem__ImageWrapper AspectRatio">
+                          <div class="AspectRatio" style="--aspect-ratio: 1.0">
+                            <img class="CartItem__Image" src="media/shopify/variant2.jpeg" alt="Ah-mazing Hair Vitamin mit Biotin, zuckerfrei">
+                          </div>
+                        </div>
+                        <div class="CartItem__Info">
+                          <h2 class="CartItem__Title">
+                            Ah-mazing Hair Vitamin mit Biotin, zuckerfrei
+                          </h2>
+                          <div class="CartItem__Meta Heading Text--subdued"><p class="CartItem__Variant">20% Rabatt</p></div>
+                          <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+                            <div class="CartItem__QuantitySelector">
+                              <div class="QuantitySelector">
+                                <button class="QuantitySelector__Button minus-btn Link Link--primary" title="Setze die Menge auf 0" data-elem="variant4" data-qty="quantity_text_4" data-action="update-item-quantity">
+                                  <svg class="Icon Icon--minus" role="presentation" viewBox="0 0 16 2">
+                                    <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square"></path>
+                                  </svg>
+                                </button>
+                                <input type="text" id="quantity_text_4" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" value="0">
+                                <button class="QuantitySelector__Button plus-btn Link Link--primary" title="Setze die Menge auf 2" data-action="update-item-quantity">
+                                  <svg class="Icon Icon--plus" role="presentation" viewBox="0 0 16 16">
+                                    <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                      <path d="M8,1 L8,15"></path>
+                                      <path d="M1,8 L15,8"></path>
+                                    </g>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="CartItem__PriceList">
+                              <span class="CartItem__Price Price Price--compareAt">€99,60</span>
+                                <span class="CartItem__OriginalPrice Price">€79,70</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
               </div>
             </div>
           </div>

@@ -18,115 +18,6 @@ img {
   max-width: 100%;
 }
 
-/**
- * ----------------------------------------------------------------------------------------------
- * Flickity styles
- * ----------------------------------------------------------------------------------------------
- */
-
- .flickity-enabled {
-  position: relative;
-}
-
-body:not(.is-tabbing) .flickity-enabled:focus {
-  outline: none;
-}
-
-.flickity-viewport {
-  overflow: hidden;
-  position: relative;
-  height: auto;
-}
-
-.flickity-slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-/* draggable */
-.flickity-enabled {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.flickity-enabled.is-draggable {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.flickity-enabled.is-draggable .flickity-viewport {
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-/* ---- previous/next buttons ---- */
-.flickity-prev-next-button {
-  position: absolute;
-}
-
-.flickity-prev-next-button[disabled] {
-  opacity: 0;
-}
-
-.flickity-prev-next-button svg {
-  width: auto;
-  height: 18px;
-  stroke-width: 1.5px;
-  stroke: currentColor;
-}
-
-/* ---- page dots ---- */
-.flickity-page-dots {
-  width: 100%;
-  padding: 0;
-  margin: 22px 0 0 0;
-  list-style: none;
-  text-align: center;
-}
-
-.flickity-page-dots .dot {
-  position: relative;
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  margin: 0 6px;
-  border-radius: 50%;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid var(--border-color);
-  transition: color 0.2s ease-in-out, background 0.2s ease-in-out; /* This is used to increase the clickable area */
-}
-
-.flickity-page-dots .dot::before {
-  position: absolute;
-  content: "";
-  top: -6px;
-  right: -6px;
-  left: -6px;
-  bottom: -6px;
-}
-
-.flickity-page-dots .dot.is-selected {
-  background: currentColor;
-  border-color: currentColor;
-}
-
-@media screen and (min-width: 641px) {
-  .flickity-page-dots .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 7px;
-    border-width: 2px;
-  }
-}
-
 
 header {
   padding: 10px 0;
@@ -394,6 +285,16 @@ footer ul li:first-child {
 .CartItemWrapper {
   position: relative;
   border-bottom: 1px solid rgba(0,0,0,.1);
+  height:0px;
+  display: none;
+  transition:all .5s ease-in-out;
+}
+.CartItemWrapper.show {
+  height: 210px;
+  display: block;
+}
+.CartItemWrapper .inner {
+  padding-top: 30px;
 }
 .CartItem__Remove {
   position: absolute;
@@ -408,7 +309,6 @@ footer ul li:first-child {
 .CartItem {
   display: table;
   table-layout: fixed;
-  margin: 30px 0;
   width: 100%;
 }
 .CartItem__ImageWrapper, .CartItem__Info {
@@ -545,6 +445,10 @@ footer ul li:first-child {
   background: #000;
   padding: 15px;
   letter-spacing: 1px;
+}
+.Drawer__Main {
+  overflow-y: auto;
+  height: calc(100% - 370px);
 }
 
 @media only screen and (min-width: 768px) {
