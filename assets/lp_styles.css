@@ -413,6 +413,7 @@ footer ul li:first-child {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
+  cursor: pointer;
 }
 .tax-custom {
   display: flex;

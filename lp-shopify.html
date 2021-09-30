@@ -254,7 +254,8 @@
                         </div>
                       </div>
                       <div class="CartItem__PriceList">
-                        <span class="CartItem__Price Price">€24,90</span>
+                        <span class="CartItem__Price Price--compareAt single" style="display: none;" data-price="€24,90">€24,90</span>
+                        <span class="CartItem__Price Price single" data-price="€24,90">€24,90</span>
                         </div>
                       </div>
                     </div>
@@ -300,8 +301,8 @@
                           </div>
                         </div>
                         <div class="CartItem__PriceList">
-                          <span class="CartItem__Price Price Price--compareAt">€49,80</span>
-                            <span class="CartItem__OriginalPrice Price">€44,80</span>
+                          <span class="CartItem__Price Price--compareAt" data-price="€49,80">€49,80</span>
+                            <span class="CartItem__OriginalPrice Price" data-price="€44,80">€44,80</span>
                           </div>
                         </div>
                       </div>
@@ -347,8 +348,8 @@
                             </div>
                           </div>
                           <div class="CartItem__PriceList">
-                            <span class="CartItem__Price Price Price--compareAt">€74,70</span>
-                              <span class="CartItem__OriginalPrice Price">€63,50</span>
+                            <span class="CartItem__Price Price--compareAt" data-price="€74,70">€74,70</span>
+                              <span class="CartItem__OriginalPrice Price" data-price="€63,50">€63,50</span>
                             </div>
                           </div>
                         </div>
@@ -394,8 +395,8 @@
                               </div>
                             </div>
                             <div class="CartItem__PriceList">
-                              <span class="CartItem__Price Price Price--compareAt">€99,60</span>
-                                <span class="CartItem__OriginalPrice Price">€79,70</span>
+                              <span class="CartItem__Price Price--compareAt" data-price="€99,60">€99,60</span>
+                                <span class="CartItem__OriginalPrice Price" data-price="€79,70">€79,70</span>
                               </div>
                             </div>
                           </div>
@@ -412,7 +413,7 @@
               <div class="DiscountContainer--Custom">
                 <div class="DiscountSubmit--Custom">
                   <input class="DiscountInput--Custom" type="text" placeholder="Rabattcode" id="discount-input">
-                  <button data-action="trigger-discount" type="button" id="AddDiscountButton" class="Button Button--primary DiscountButton--Custom">Anwenden</button>
+                  <button data-action="trigger-discount" type="button" id="AddDiscountButton" onclick="renderDiscount()" class="Button Button--primary DiscountButton--Custom">Anwenden</button>
                     <button data-action="trigger-discount" type="button" id="resetDiscount" class="DiscountButton--Reset" style="display: none;"></button>
                   </div>
                   <span id="Discount-Message" class="invalid-coupon-code" style="color: red;">
