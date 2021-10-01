@@ -423,6 +423,10 @@ footer ul li:first-child {
 #DiscountDiv span, #DiscountPrice, .tax-custom span {
   font-size: 16px;
 }
+#DiscountPrice { 
+  width: 20%;    
+  text-align: right; 
+}
 .tax-custom .Cart__Taxes {
   font-size: 12px;
   font-weight: 600;

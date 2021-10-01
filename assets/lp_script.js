@@ -40,13 +40,14 @@ function addToCart() {
   }
 
   document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
-    var price_orig =  trigger.getElementsByClassName('Price')[0];
-    price_orig = price_orig.textContent;
-    price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-
+    var price_orig =  parseFloat(trigger.querySelector('.Price').getAttribute('data-price'));
     total = total + price_orig;
   });
   document.getElementById("PriceAfterDiscount").textContent = "€" + total.toFixed(2).replace('.', ',');
+
+  if (document.getElementById("discount-input").value != "") {
+    renderDiscount();
+  }
 
   // open cart
   var element = document.getElementById("cart");
@@ -97,14 +98,13 @@ function renderDiscount() {
   if (!code_found) {
     document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
       var total = 0;
-      var price_orig =  trigger.getElementsByClassName('Price')[0].getAttribute('data-price');
-      price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
+      var price_orig = parseFloat(trigger.querySelector('.Price').getAttribute('data-price'));
       total = total + price_orig;
       document.getElementById("PriceAfterDiscount").textContent = "€" + total.toFixed(2).replace('.', ',');
-      if (trigger.getElementsByClassName('Price--compareAt')[0].classList.contains('single')) {
-        trigger.getElementsByClassName('Price--compareAt.single')[0].style.display = 'none';
+      if (trigger.querySelector('.Price--compareAt').classList.contains('single')) {
+        trigger.querySelector('.Price--compareAt.single').style.display = 'none';
       }
-      trigger.getElementsByClassName('Price')[0].textContent = trigger.getElementsByClassName('Price')[0].getAttribute('data-price');
+      trigger.querySelector('.Price').textContent = "€" + (trigger.querySelector('.Price').getAttribute('data-price')).replace('.', ',');
     });
     document.getElementById("Discount-Message").innerHTML = "Rabattcode existiert nicht oder ist schon abgelaufen!";
     document.getElementById("Discount-Message").style.color = "red";
@@ -116,26 +116,64 @@ function renderDiscount() {
 
     //calculations
     document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
-      var price_orig =  trigger.getElementsByClassName('Price')[0];
-      price_orig = price_orig.textContent;
-      price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-
+      var price_orig = parseFloat(trigger.querySelector('.Price').getAttribute('data-price'));
       if (type == "money") {
         new_total = total - value;
       } else if (type == "percentage") {
         var price = price_orig - (price_orig*(value/100));
-        new_total = new_total + price;
-        discount_total = discount_total + (price_orig*(value/100));
-        if (trigger.getElementsByClassName('Price--compareAt')[0].classList.contains('single')) {
-          trigger.getElementsByClassName('Price--compareAt')[0].style.display = 'inline-block';
+        if (trigger.querySelector('.Price--compareAt').classList.contains('single')) {
+          trigger.querySelector('.Price--compareAt').style.display = 'inline-block';
         }
-        trigger.getElementsByClassName('Price')[0].textContent = "€" + price.toFixed(2).replace('.', ',');
+        var qty = parseInt(trigger.querySelector('.QuantitySelector__CurrentQuantity').value);
+        price = price * qty;
+        price_orig = price_orig * qty;
+        new_total = new_total + price;
+        discount_total = discount_total + (price_orig-price);
+        console.log(price_orig);
+        console.log(price);
+        trigger.querySelector('.Price').textContent = "€" + price.toFixed(2).replace('.', ',');
       } 
     });
-    document.getElementById('DiscountPrice').textContent = "€" + discount_total.toFixed(2).replace('.', ',');
+    document.getElementById('DiscountPrice').textContent = "-€" + discount_total.toFixed(2).replace('.', ',');
     document.getElementById("PriceAfterDiscount").textContent = "€" + new_total.toFixed(2).replace('.', ',');
   }
 }
+
+function reCalculate(elem, qty) {
+  var price = parseFloat(elem.querySelector('.Price').getAttribute('data-price'));
+  var total = price * qty;
+  elem.querySelector('.Price').textContent = "€" + total.toFixed(2).replace('.', ',');
+
+  console.log("total", total); 
+  console.log("price", price); 
+
+  var price_orig = parseFloat(elem.querySelector('.Price--compareAt').getAttribute('data-price'));
+  var total_orig = price_orig * qty;
+  elem.querySelector('.Price--compareAt').textContent = "€" + total_orig.toFixed(2).replace('.', ',');
+
+  reCalculateTotal();
+}
+
+function reCalculateTotal() {
+  var cart_total = 0;
+  var items = document.querySelectorAll('.CartItemWrapper.show').length;
+
+  if (items > 0) {
+    document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
+      var price = trigger.querySelector('.Price').textContent;
+      price = parseFloat(price.substring(1).replace(/,/g, '.'));
+      cart_total = cart_total + price;
+    });
+    document.getElementById("PriceAfterDiscount").textContent = "€" + cart_total.toFixed(2).replace('.', ',');
+  } else {
+    document.getElementsByClassName('drawer_footer_custom')[0].style.display = 'none';
+  }
+
+  if (document.getElementById("discount-input").value != "") {
+    renderDiscount();
+  }
+}
+
 
 document.querySelectorAll('.thumbnail_click').forEach(trigger => {
   trigger.onclick = function(e) {
@@ -178,119 +216,37 @@ document.querySelectorAll('.CartItem__Remove').forEach(trigger => {
     document.getElementById(elem).classList.remove("show");
     document.getElementById(elem2).value = 0;
 
-    var items = document.querySelectorAll('.CartItemWrapper.show').length;
-    if (items > 0) {
-      var total = 0;
-      document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
-        var price_orig =  trigger.getElementsByClassName('Price')[0].textContent;
-        price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-        total = total + price_orig;
-        document.getElementById("PriceAfterDiscount").textContent = "€" + total.toFixed(2).replace('.', ',');
-      });
+    reCalculateTotal();
+  };
+});
+
+document.querySelectorAll('.minus-btn').forEach(trigger => {
+  trigger.onclick = function(e) {
+    e.preventDefault();
+    var qty_elem = trigger.nextElementSibling;
+    var qty = parseInt(qty_elem.value) - 1;
+
+    if (qty > 0) {
+      qty_elem.value = qty;
+
+      reCalculate(trigger.parentNode.parentNode.nextElementSibling, qty);
     } else {
-      document.getElementsByClassName('drawer_footer_custom')[0].style.display = 'none';
+      var elem = trigger.getAttribute('data-elem');
+      var elem2 = trigger.getAttribute('data-qty');
+  
+      document.getElementById(elem).classList.remove("show");
+      document.getElementById(elem2).value = 0;
     }
   };
 });
 
-// document.querySelectorAll('.minus-btn').forEach(trigger => {
-//   trigger.onclick = function(e) {
-//     e.preventDefault();
-//     var qty_elem = trigger.nextElementSibling;
-//     var qty = parseInt(qty_elem.value) - 1;
+document.querySelectorAll('.plus-btn').forEach(trigger => {
+  trigger.onclick = function(e) {
+    e.preventDefault();
+    var qty_elem = trigger.previousSibling.previousSibling;
+    var qty = parseInt(qty_elem.value) + 1;
+    qty_elem.value = qty;
 
-//     if (qty > 0) {
-//       qty_elem.value = qty;
-
-//       var price_orig =  trigger.parentNode.parentNode.nextElementSibling.querySelector('.Price').getAttribute('data-price');
-//       price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-//       price_orig = price_orig * qty;
-//       trigger.parentNode.parentNode.nextElementSibling.querySelector('.Price').textContent = "€" + price_orig.toFixed(2).replace('.', ',');
-
-//       var price_orig = trigger.parentNode.parentNode.nextElementSibling.querySelector('.Price--compareAt').getAttribute('data-price');
-//       price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-//       price_orig = price_orig * qty;
-//       trigger.parentNode.parentNode.nextElementSibling.querySelector('.Price--compareAt').textContent = "€" + price_orig.toFixed(2).replace('.', ',');
-
-//       var items = document.querySelectorAll('.CartItemWrapper.show').length;
-//       if (items > 0) {
-//         var total = 0;
-//         document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
-//           var price_orig =  trigger.getElementsByClassName('Price')[0].textContent;
-//           price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-//           total = total + price_orig;
-//           document.getElementById("PriceAfterDiscount").textContent = "€" + total.toFixed(2).replace('.', ',');
-//         });
-//       } else {
-//         document.getElementsByClassName('drawer_footer_custom')[0].style.display = 'none';
-//       }
-
-//       if (document.getElementById("discount-input").value != "") {
-//         var discount_total = 0;
-//         document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
-//           var price =  trigger.querySelector('.Price').textContent;
-//           price = parseFloat(price.substring(1).replace(/,/g, '.'));
-  
-//           var price_orig = trigger.querySelector('.Price--compareAt').textContent;
-//           price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-  
-//           discount_total = discount_total + (price_orig - price);
-//         });
-//         document.getElementById("PriceAfterDiscount").textContent = "€" + discount_total.toFixed(2).replace('.', ',');
-//       }
-
-//     } else {
-//       var elem = trigger.getAttribute('data-elem');
-//       var elem2 = trigger.getAttribute('data-qty');
-  
-//       document.getElementById(elem).classList.remove("show");
-//       document.getElementById(elem2).value = 0;
-//     }
-//   };
-// });
-
-// document.querySelectorAll('.plus-btn').forEach(trigger => {
-//   trigger.onclick = function(e) {
-//     e.preventDefault();
-//     var qty_elem = trigger.previousSibling.previousSibling;
-//     var qty = parseInt(qty_elem.value) + 1;
-//     qty_elem.value = qty;
-
-//     var price =  trigger.parentNode.parentNode.nextElementSibling.querySelector('.Price').getAttribute('data-price');
-//     price = parseFloat(price.substring(1).replace(/,/g, '.'));
-//     price = price * qty;
-//     trigger.parentNode.parentNode.nextElementSibling.querySelector('.Price').textContent = "€" + price.toFixed(2).replace('.', ',');
-
-//     var price_orig = trigger.parentNode.parentNode.nextElementSibling.querySelector('.Price--compareAt').getAttribute('data-price');
-//     price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-//     price_orig = price_orig * qty;
-//     trigger.parentNode.parentNode.nextElementSibling.querySelector('.Price--compareAt').textContent = "€" + price_orig.toFixed(2).replace('.', ',');
-
-//     var items = document.querySelectorAll('.CartItemWrapper.show').length;
-//     if (items > 0) {
-//       var total = 0;
-//       document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
-//         var price_orig =  trigger.getElementsByClassName('Price')[0].textContent;
-//         price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-//         total = total + price_orig;
-//         document.getElementById("PriceAfterDiscount").textContent = "€" + total.toFixed(2).replace('.', ',');
-//       });
-//     } else {
-//       document.getElementsByClassName('drawer_footer_custom')[0].style.display = 'none';
-//     }
-
-//     if (document.getElementById("discount-input").value != "") {
-//       var discount_total = 0;
-//       document.querySelectorAll('.CartItemWrapper.show').forEach(trigger => {
-//         var price =  trigger.querySelector('.Price').textContent;
-//         price = parseFloat(price.substring(1).replace(/,/g, '.'));
-
-//         var price_orig = trigger.querySelector('.Price--compareAt').textContent;
-//         price_orig = parseFloat(price_orig.substring(1).replace(/,/g, '.'));
-
-//         discount_total = discount_total + (price_orig - price);
-//       });
-//       document.getElementById("PriceAfterDiscount").textContent = "€" + discount_total.toFixed(2).replace('.', ',');
-//     }
-//   };
-// });
+    reCalculate(trigger.parentNode.parentNode.nextElementSibling, qty);
+  };
+});
