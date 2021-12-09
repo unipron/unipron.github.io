@@ -1,1 +1,19 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body class="body">
+    <script src="https://consent.cookiefirst.com/banner.js" data-cookiefirst-key="6c750df6-f056-4f83-9db6-517fad1020eb"></script>
+    <div>Youtube Video here:</div>
+    <iframe width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen" data-src="https://www.youtube.com/embed/1prweT95Mo0" data-cookiefirst-category="advertising"></iframe>
+<div class="cookiefirst-disabled-resource">
+ Please <button onclick="CookieFirst.acceptCategory('advertising')">Accept marketing cookies</button> to watch this video.
+</div>                
+    <h1>Cookie Demo</h1>   
+</body>
+</html>
